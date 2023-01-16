@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int arr[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+    int n = 9;
+    int x = 3;
+    int start = 0;
+    int end = n;
+    while (start < end)
+    {
+        int mid = end / 2;
+        if (arr[mid] == x)
+        {
+            printf("element present ");
+            break;
+        }
+        else if (arr[mid] > x)
+        {
+            end = mid - 1;
+        }
+        else
+        {
+            start = mid + 1;
+        }
+    }
+    if (start > end)
+    {
+        printf("enlemt nhi mila");
+    }
+}
